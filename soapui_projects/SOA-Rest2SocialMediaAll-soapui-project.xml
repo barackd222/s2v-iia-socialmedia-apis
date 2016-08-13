@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="2e1b9771-4866-4aa2-9980-8c39a29c19a0" activeEnvironment="Default" name="SOA_Rest2SocialMediaAll" resourceRoot="" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="6a9546d4-aadd-4f17-8ba2-8410d87dafe7" wadlVersion="http://wadl.dev.java.net/2009/02" name="socialmedia" type="rest" basePath="/soa-infra/resources/default/SocialMediaAPIProject!1.0/socialmedia" definitionUrl="http://soa12c.vbox.oracle.com:7001/soa-infra/resources/default/SocialMediaAPIProject!1.0/socialmedia/application.wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://soa12c.vbox.oracle.com:7001/soa-infra/resources/default/SocialMediaAPIProject!1.0/socialmedia/application.wadl"><con:part><con:url>http://soa12c.vbox.oracle.com:7001/soa-infra/resources/default/SocialMediaAPIProject!1.0/socialmedia/application.wadl</con:url><con:content><![CDATA[<application xmlns:soa="http://www.oracle.com/soa/rest" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="http://www.oracle.com/s2v/iia/v1" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="socialmedia">RestService</doc>
+  <grammars>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:client="http://xmlns.oracle.com/S2VIIASocialMediaApplication/SocialMediaAPIProject/SocialMediaOrchestration" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+      <import schemaLocation="http://soa12c.vbox.oracle.com:7001/soa-infra/services/default/SocialMediaAPIProject!1.0/Schemas/socialmedia.xsd" namespace="http://www.oracle.com/s2v/iia/v1"/>
+    </schema>
+  </grammars>
+  <resources base="http://soa12c.vbox.oracle.com:7001/soa-infra/resources/default/SocialMediaAPIProject!1.0/socialmedia">
+    <resource path="/social/event">
+      <method name="POST" soa:wsdlOperation="process">
+        <request>
+          <representation mediaType="application/json" element="cns:GenericMessage" xmlns:cns="http://www.oracle.com/s2v/iia/v1"/>
+        </request>
+        <response status="202"/>
+      </method>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://wadl.dev.java.net/2009/02</con:type></con:part><con:part><con:url>http://soa12c.vbox.oracle.com:7001/soa-infra/services/default/SocialMediaAPIProject!1.0/Schemas/socialmedia.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.oracle.com/s2v/iia/v1" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:ns1types="http://www.oracle.com/s2v/iia/v1" xmlns:ns1="http://www.oracle.com/s2v/iia/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="GenericMessage" type="ns1:GenericMessageType"/>
+  <xsd:element name="FacebookMessage" type="ns1:FacebookMessageType"/>
+  <xsd:element name="LinkedInMessage" type="ns1:LinkedInMessageType"/>
+  <xsd:element name="SalesforceMessage" type="ns1:SalesforceMessageType"/>
+  <xsd:element name="GoogleCalendarMessage" type="ns1:GoogleCalendarMessageType"/>
+  <xsd:complexType name="GenericMessageType">
+    <xsd:sequence>
+      <xsd:element name="id" type="xsd:string"/>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="description" type="xsd:string"/>
+      <xsd:element name="when" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FacebookMessageType">
+    <xsd:sequence>
+      <xsd:element name="message" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LinkedInMessageType">
+    <xsd:sequence>
+      <xsd:element name="message" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SalesforceMessageType">
+    <xsd:sequence>
+      <xsd:element name="campaign" type="xsd:string"/>
+      <xsd:element name="description" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoogleCalendarMessageType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="description" type="xsd:string"/>
+      <xsd:element name="when" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://soa12c.vbox.oracle.com:7001</con:endpoint></con:endpoints><con:resource name="/social/event" path="/social/event" id="b0440cad-6d15-45cf-bc1a-56277c33bf78"><con:settings/><con:parameters/><con:method name="POST" id="ed5c9881-dfad-4846-9df9-b072a3543d67" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xmlns:v1="http://www.oracle.com/s2v/iia/v1">v1:GenericMessage</con:element><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="5e5fe471-c456-48d5-8322-5567c51bb463" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://soa12c.vbox.oracle.com:7001</con:endpoint><con:request>{"id": "70190000000Xf4w", "name":"Speed 2 Value - Integration in Action Workshop",
+"description":"Welcome to the Super S2V - Integration in Action Workshop. Now in your own city",
+"when":"2016-08-21"}
+</con:request><con:originalUri>http://soa12c.vbox.oracle.com/soa-infra/resources/default/SocialMediaAPIProject!1.0/socialmedia/social/event</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

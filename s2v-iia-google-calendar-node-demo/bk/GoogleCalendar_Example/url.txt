@@ -1,0 +1,6 @@
+https://developers.google.com/google-apps/calendar/quickstart/nodejs
+https://developers.google.com/google-apps/calendar/create-events
+
+
+
+- Check privileges: https://accounts.google.com/IssuedAuthSubTokens

@@ -1,0 +1,19 @@
+<xsd:schema xmlns:ns1types="http://www.oracle.com/s2v/iia/v1" 
+			xmlns:ns1="http://www.oracle.com/s2v/iia/v1" 
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+			targetNamespace="http://www.oracle.com/s2v/iia/v1" 
+			elementFormDefault="qualified" 
+			attributeFormDefault="unqualified">
+	
+	<xsd:element name="Message" type="ns1:MessageType"/>
+	
+	<xsd:complexType name="MessageType">
+		<xsd:sequence>
+			<xsd:element name="ID" type="xsd:string"/>
+			<xsd:element name="Name" type="xsd:string"/>
+			<xsd:element name="Description" type="xsd:string"/>
+			<xsd:element name="When" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>	
+
+</xsd:schema>

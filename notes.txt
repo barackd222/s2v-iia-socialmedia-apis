@@ -1,0 +1,21 @@
+ID: 314915298841981
+secret: 35df80e9f069d2aec72ac92426e52edc
+
+user_posts user_likes publish_actions manage_pages user_friends
+
+https://graph.facebook.com/oauth/authorize?scope=user_posts%20user_likes%20publish_actions%20manage_pages%20user_friends&redirect_uri=https://soa12c.vbox.oracle.com:7002/icsapis/agent/oauth/callback&state=iTVOzN0e7Z_ehZ0zUBG0TVyf2fZhN4XztSjUF40SoI8F5PHomYvI!1780387677!1470200864030&client_id=314915298841981&
+
+https://soa12c.vbox.oracle.com:7002/icsapis/agent/oauth/callback
+https://ICS_hostname:ICS_SSL_port_number/icsapis/agent/oauth/callback
+
+__________________________________________________________________________.
+
+LinkedIn:
+Original App:  
+	Client ID:	7520xpxfaop736
+	Client Secret:	1fHeUjwU84XwNGUV
+
+New App:
+	Client ID:	75hywcf5wdlivt
+	Client Secret:	bNAH01mTdayA0KtH
+	Scope: r_basicprofile+r_emailaddress+w_share
